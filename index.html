@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Minimalista</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        nav{
+            font-family: "Lobster", sans-serif;
+            text-align: center;
+            font-size: 45px;
+        }
+        body{
+            font-family: "Varela Round", sans-serif;
+        }
+        .focus-effect {
+            transition: transform 0.3s ease, filter 0.3s ease;
+            width: 90%; 
+            height: 80px; 
+        }
+
+        .focus-effect:hover {
+            transform: scale(1.1);
+            filter: blur(0);
+            z-index: 10;
+        }
+
+        .focus-effect:hover ~ .focus-effect,
+        .focus-effect:hover ~ * {
+            filter: blur(2px);
+        }
+
+        .focus-effect:not(:hover) {
+            filter: blur(2px);
+        }
+        
+        .focus-effect:hover {
+            filter: blur(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col h-screen">
+
+    <nav class="bg-gray-800 py-4">
+        <h1>Menú Principal</h1>
+    </nav>
+
+    <div class="flex-grow flex flex-col items-center justify-center space-y-4">
+        <a class="bg-gray-700 hover:bg-gray-600 text-white rounded flex items-center justify-center focus-effect" href="Interfaz1.html">
+            <span class="material-icons mr-2">app_registration</span>Registro para Pasaporte
+        </a>
+        <a class="bg-gray-700 hover:bg-gray-600 text-white rounded flex items-center justify-center focus-effect" href="Interfaz2.html">
+            <span class="material-icons mr-2">app_registration</span>Registro de Usuarios
+        </a>
+        <a class="bg-gray-700 hover:bg-gray-600 text-white rounded flex items-center justify-center focus-effect" href="Interfaz3.html">
+            <span class="material-icons mr-2">pageview</span>Boogle
+        </a>
+        <a class="bg-gray-700 hover:bg-gray-600 text-white rounded flex items-center justify-center focus-effect" href="Interfaz4.html">
+            <span class="material-icons mr-2">shop</span>Exhibición de Perfumes
+        </a>
+    </div>
+
+    <footer class="bg-gray-800 py-4">
+        <p class="text-center">UTM | YAOP</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibición de Perfumes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Varela Round", sans-serif;
+            background: linear-gradient(rgb(238, 193, 193), rgb(255, 210, 210));
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            font-size: 30px;
+            background-color: rgb(66, 0, 0);
+            padding: 0.5px;
+            font-family: "Lobster", sans-serif;
+            background: linear-gradient(rgb(95, 1, 1), rgb(116, 3, 3));
+        }
+        h1 {
+            text-align: center;
+        }
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        @media (max-width: 1024px) {
+            .contenedor {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .contenedor {
+                grid-template-columns: 1fr;
+            }
+        }
+        .tarjeta {
+            background-color: #22222231;
+            color: #000;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .tarjeta:hover {
+            transform: scale(1.05);
+            background-color: #8a00007c;
+        }
+        .tarjeta img {
+            width: 100px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+        .tarjeta h3, .tarjeta p {
+            margin: 10px 0;
+        }
+        .tarjeta button {
+            background-color: #9c0000;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            margin: 10px auto; /* Cambia aquí a auto para centrar */
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .tarjeta button:hover {
+            background-color: #188003;
+        }
+        .estrella {
+            color: #ff0000; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exhibición de Perfumes</h1>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div class="tarjeta">
+                <img src="/imgs/CHARLESON.png" alt="CHARLESON">
+                <h3>CHARLESON</h3>
+                <p>Sisley</p>
+                <p>Perfume 100ml</p>
+                <p class="estrella">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half</span>
+                </p>
+                <p>Precio: $190.00</p>
+                <button><span class="material-icons">add_shopping_cart</span> Agregar al carrito</button>
+            </div>
+            <div class="tarjeta">
+                <img src="/imgs/HYPNOTIC.png" alt="HYPNOTIC">
+                <h3>HYPNOTIC</h3>
+                <p>Creed</p>
+                <p>Perfume 100ml</p>
+                <p class="estrella">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half</span>
+                </p>
+                <p>Precio: $360.00</p>
+                <button><span class="material-icons">add_shopping_cart</span> Agregar al carrito</button>
+            </div>
+            <div class="tarjeta">
+                <img src="/imgs/JOY.png" alt="JOY">
+                <h3>JOY</h3>
+                <p>Miller Harris</p>
+                <p>Perfume 50ml</p>
+                <p class="estrella">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half</span>
+                    <span class="material-icons">star_border</span>
+                </p>
+                <p>Precio: $185.00</p>
+                <button><span class="material-icons">add_shopping_cart</span> Agregar al carrito</button>
+            </div>
+            <div class="tarjeta">
+                <img src="/imgs/ANGEL.png" alt="ANGEL">
+                <h3>ANGEL</h3>
+                <p>Miller Harris</p>
+                <p>Perfume 50ml</p>
+                <p class="estrella">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half</span>
+                </p>
+                <p>Precio: $145.00</p>
+                <button><span class="material-icons">add_shopping_cart</span> Agregar al carrito</button>
+            </div>
+            <div class="tarjeta">
+                <img src="/imgs/BURBERRY.png" alt="BURBERRY">
+                <h3>BURBERRY</h3>
+                <p>Miller Harris</p>
+                <p>Perfume 50ml</p>
+                <p class="estrella">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half</span>
+                    <span class="material-icons">star_border</span>
+                </p>
+                <p>Precio: $279.00</p>
+                <button><span class="material-icons">add_shopping_cart</span> Agregar al carrito</button>
+            </div>
+            <div class="tarjeta">
+                <img src="/imgs/OUR.png" alt="OUR">
+                <h3>OUR</h3>
+                <p>Miller Harris</p>
+                <p>Perfume 50ml</p>
+                <p class="estrella">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half</span>
+                    <span class="material-icons">star_border</span>
+                </p>
+                <p>Precio: $190.00</p>
+                <button><span class="material-icons">add_shopping_cart</span> Agregar al carrito</button>
+            </div>
+            <div class="tarjeta">
+                <img src="/imgs/PRADA.png" alt="PRADA">
+                <h3>PRADA</h3>
+                <p>Miller Harris</p>
+                <p>Perfume 100ml</p>
+                <p class="estrella">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half</span>
+                    <span class="material-icons">star_border</span>
+                </p>
+                <p>Precio: $270.00</p>
+                <button><span class="material-icons">add_shopping_cart</span> Agregar al carrito</button>
+            </div>
+            <div class="tarjeta">
+                <img src="/imgs/SHALIMAR.png" alt="SHALIMAR">
+                <h3>SHALIMAR</h3>
+                <p>Miller Harris</p>
+                <p>Perfume 50ml</p>
+                <p class="estrella">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star_half</span>
+                </p>
+                <p>Precio: $165.00</p>
+                <button><span class="material-icons">add_shopping_cart</span> Agregar al carrito</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

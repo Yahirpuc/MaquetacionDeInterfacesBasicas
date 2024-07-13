@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Inicio</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #383838;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #383838;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: transparent;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: background 0.5s;
+        }
+
+        nav a:hover::after {
+            background: rgb(235, 35, 0);
+        }
+
+        nav a.iniciar-sesion::after {
+            display: none; /* Elimina la línea roja solo para este enlace */
+        }
+
+        nav button {
+            padding: 8px 16px;
+            font-size: 16px;
+            border-radius: 24px;
+            cursor: pointer;
+            border: none;
+            background-color: #464646;
+            color: white;
+            transition: background-color 0.5s;
+        }
+
+        nav button:hover {
+            background-color: #01b92f;
+        }
+
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            color: #ffffff;
+            margin: 80px 0 20px;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        input[type="text"] {
+            width: 400px;
+            padding: 10px 40px 10px 50px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 24px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            background-color: #383838;
+            color: white;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 12px;
+            color: #777;
+        }
+
+        .voice-search-icon {
+            position: absolute;
+            right: 70px;
+            top: 12px;
+            color: #777;
+            cursor: pointer;
+        }
+
+        .image-search-icon {
+            position: absolute;
+            right: 40px;
+            top: 12px;
+            color: #777;
+            cursor: pointer;
+        }
+
+        .botones {
+            display: flex;
+            gap: 10px;
+            margin-left: 60px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 24px;
+            cursor: pointer;
+            border: none;
+            background-color: #464646;
+            color: white;
+            transition: background-color 0.8s;
+        }
+
+        button:hover {
+            background-color: #c20202;
+        }
+
+        .links {
+            margin-top: 250px;
+            text-align: center;
+        }
+
+        .links a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #272727;
+            padding: 10px 20px;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="#">Imágenes</a>
+            <a href="#">Mapas</a>
+            <a href="#">Videos</a>
+            <a href="#">Más</a>
+        </div>
+        <div>
+            <a class="iniciar-sesion" href="https://accounts.google.com/v3/signin/identifier?ifkv=AdF4I76KoY8hZaTUAvbv7yw_yKdCGYsUj1UOpf1wOWsvSqkBPps1Y7VZT19sulC45ZcSeuRZ7ZRJKQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-66175340%3A1720848237354811&ddm=0"><button>Iniciar Sesión</button></a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Boogle</h1>
+        <div class="search-container">
+            <span class="material-icons search-icon">search</span>
+            <input type="text" id="search-input" placeholder="Escribe aquí...">
+            <span class="material-icons voice-search-icon">mic</span>
+            <span class="material-icons image-search-icon">camera_alt</span>
+        </div>
+        <div class="botones">
+            <button onclick="buscarConBoogle()">Buscar con Boogle</button>
+            <a href="https://doodles.google/"><button>Voy a tener suerte</button></a>
+        </div>
+    </main>
+
+    <div class="links">
+        <a href="#">Acerca de</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 UTM | YAOP</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+    
+    <script>
+        function buscarConBoogle() {
+            const query = document.getElementById('search-input').value;
+            const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

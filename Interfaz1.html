@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pasaporte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!--Estilos de fuente de google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        header {
+            background: linear-gradient( rgb(78, 59, 148), rgb(56, 41, 109));
+            background-color: rgb(78, 59, 148);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            
+         
+            
+            
+              
+        }
+        body {
+            background: linear-gradient(500deg, #8275f7 0%, #ddceff 50%, #8f83fc 100%);
+            align-items: center;
+            font-family: "Varela Round", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        main {
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+        .card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.226);
+            border-radius: 20px;
+        }
+        .btn-primary {
+            border-radius: 50px;
+            background-color: rgb(78, 59, 148);
+            border: none;
+            width: 80%; 
+        }
+        
+        .btn-primary:hover {
+            background-color: rgb(0, 182, 39);
+        }
+        .form-control, .form-select {
+            border-color: rgb(174, 174, 175);
+            border-radius: 20px;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: rgb(78, 59, 148);
+            box-shadow: 0 0 0 0.2rem rgba(78, 59, 148, 0.25);
+        }
+        .dropdown-item.active {
+            background-color: rgb(78, 59, 148);
+            color: white;
+        }
+        .dropdown-item:hover {
+            background-color: rgba(78, 59, 148, 0.8);
+        }
+        .dropdown-item {
+            color: rgb(78, 59, 148);
+        }
+        .enviar {
+            display: flex;
+            justify-content: center; 
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Pasaporte</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input class="form-control" type="text" id="nombre" placeholder="Escribe tu nombre" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input class="form-control" type="text" id="apellido" placeholder="Escribe tu apellido" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="FechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input class="form-control" type="date" id="FechaNacimiento" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad de Nacimiento</label>
+                        <input class="form-control" type="text" id="ciudad" placeholder="Escribe el nombre de tu ciudad" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="paisNacimiento" class="form-label">País de Nacimiento</label>
+                        <select class="form-select" id="paisNacimiento" required>
+                            <option selected disabled>Selecciona un país</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Argentina">Argentina</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nacionalidad" class="form-label">Nacionalidad</label>
+                        <select class="form-select" id="nacionalidad" required>
+                            <option selected disabled>Selecciona una nacionalidad</option>
+                            <option value="Estadounidense">Estadounidense</option>
+                            <option value="Canadiense">Canadiense</option>
+                            <option value="Mexicana">Mexicana</option>
+                            <option value="Brasileña">Brasileña</option>
+                            <option value="Española">Española</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="NumPasaporte" class="form-label">Número de Pasaporte</label>
+                        <input class="form-control" type="text" id="NumPasaporte" placeholder="Escribe el número de tu pasaporte" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="paisEmision" class="form-label">País donde ha sido emitido su pasaporte</label>
+                        <select class="form-select" id="paisEmision" required>
+                            <option selected disabled>Selecciona un país</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Argentina">Argentina</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="FechaEmision" class="form-label">Fecha de Emisión del Pasaporte</label>
+                        <input class="form-control" type="date" id="FechaEmision" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="FechaVencimiento" class="form-label">Fecha de Vencimiento del Pasaporte</label>
+                        <input class="form-control" type="date" id="FechaVencimiento" required>
+                    </div>
+
+                    <div class="enviar">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

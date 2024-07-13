@@ -6,7 +6,7 @@
 
 ## Práctica 6: Maquetado de Interfaces
 
-- **Alumno:** Yahir Alberto Ordóñez Puc
+- **Alumno:** Yahir Alberto Ordoñez Puc
 - **Cuatrimestre:** 3
 - **Grupo:** F
-- - **Parcial:** 3
+- **Parcial:** 3
